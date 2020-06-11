@@ -1,0 +1,3 @@
+#dcConsole { text-align: center; }
+#dcConsole .dcConsoleText { min-height: 300px; text-align: left; padding: 1rem; margin: auto; background-color: black; color: #fff; line-height: 25px; }
+#dcConsole .dcConsoleText p.title { text-align: center; font-weight: bold; color: burlywood; }

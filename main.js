@@ -1,8 +1,17 @@
 'use strict'
 
-console.log('Hello World!');
+consoleAppend('Hello World!');
 
 let a;
 a = 6;
 
-console.log(a);
+consoleAppend(a);
+
+function consoleAppend(appendText) {
+	let dcConsole = document.querySelector('#dcConsole > .dcConsoleText');
+	// dcConsole Append
+	dcConsole.innerHTML += '<br>' + appendText;
+
+	// console.log
+	console.log(appendText);
+}
