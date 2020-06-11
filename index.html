@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	
+	<!-- default: parsing -> fecthing, executing -> parsing -->
+	<script src="main.js"></script>
+	
+	<!-- async: parsing fecthing 병렬 -> parsing -> (fecthing comp -- executing) -> parsing -->
+	<script async src="main.js"></script>
+	
+	<!-- defer: parsing fecthing 병렬 -> parsing -> parsing -> order executing -->
+	<script defer src="main.js"></script>
+</head>
+<body>
+	
+</body>
+</html>
