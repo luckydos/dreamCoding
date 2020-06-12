@@ -42,7 +42,7 @@ console.log(10 >= 6); //greater than or equal
 // 6. Logical operators: || (or), && (and), ! (not)
 // 연산이 오래 걸리는 값은 뒤로 배치해서, 앞에서 true 일 경우 처리 되도록 코딩
 const value1 = true;
-const value2 = 4 < 2;
+const value2 = 4 < 2; //false
 
 // || (or), finds the first truthy value
 console.log(`or: ${value1 || value2 || check()}`);
@@ -63,7 +63,7 @@ function check() {
 }
 
 // ! (not)
-console.log(!value1);
+console.log(`! (not) ${value1} : ${!value1}`);
 
 // 7. Equality
 const stringFive = '5';
