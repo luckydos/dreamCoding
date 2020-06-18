@@ -8,13 +8,13 @@
 let gloabalName = 'gloabal name'
 {
 	let name = 'ellie';
-	console.log(name);
+	consolePrint(name);
 
 	name = 'hello';
-	console.log(name);
+	consolePrint(name);
 }
-console.log(name);
-console.log(gloabalName);
+consolePrint(name);
+consolePrint(gloabalName);
 
 // var (don't ever use this!)
 // var hoisting (move declaration from bottom to top)
@@ -24,11 +24,11 @@ console.log(gloabalName);
 	age_block = 12;
 	var age_block;
 }
-console.log('age_block: ' + age_block);
+consolePrint('age_block: ' + age_block);
 
-console.log(age);
+consolePrint(age);
 age = 3;
-console.log(age);
+consolePrint(age);
 var age;
 
 // 3. Constant, r(read only)
@@ -51,33 +51,33 @@ const maxNumber = 5;
 // function, first-class function
 const count = 17; // integer
 const size = 17.1; // decimal number
-console.log(`value: ${count}, type: ${typeof count}`);
-console.log(`value: ${size}, type: ${typeof size}`);
+consolePrint(`value: ${count}, type: ${typeof count}`);
+consolePrint(`value: ${size}, type: ${typeof size}`);
 
 // number = special numeric values: infinity, -infinity, NaN
 const infinity = 1 / 0;
 const negativeInfinity = -1 / 0;
 const nAn = 'not a number' / 2;
-console.log(infinity);
-console.log(negativeInfinity);
-console.log(nAn);
+consolePrint(infinity);
+consolePrint(negativeInfinity);
+consolePrint(nAn);
 
 // bigInt (fairly new, don't use it yet)
 const bigInt = 12345678901234567890123456789012345678901234567890n; // over(-2**53) ~ 2*53)
-console.log(`value: ${bigInt}, type: ${typeof bigInt}`);
-console.log(`Number.MAX_SAFE_INTEGER: ${Number.MAX_SAFE_INTEGER}`);
+consolePrint(`value: ${bigInt}, type: ${typeof bigInt}`);
+consolePrint(`Number.MAX_SAFE_INTEGER: ${Number.MAX_SAFE_INTEGER}`);
 
 // string
 const char = 'c';
 const brendan = 'brendan';
 const greeting = 'hello ' + brendan;
-console.log(`value: ${greeting}, type: ${typeof greeting}`);
+consolePrint(`value: ${greeting}, type: ${typeof greeting}`);
 
 
 const helloBob = `hi ${brendan}!`; // template literals (string)
-console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
+consolePrint(`value: ${helloBob}, type: ${typeof helloBob}`);
 
-console.log(`value: ${brendan}, type: ${typeof brendan}`);
+consolePrint(`value: ${brendan}, type: ${typeof brendan}`);
 
 // boolean
 // false: 0, null, undefined, NaN, ''
@@ -85,27 +85,27 @@ console.log(`value: ${brendan}, type: ${typeof brendan}`);
 const canRead = true;
 const test = 3 < 1; // flase
 
-console.log(`value: ${canRead}, type: ${canRead}`);
-console.log(`value: ${test}, type: ${test}`);
+consolePrint(`value: ${canRead}, type: ${canRead}`);
+consolePrint(`value: ${test}, type: ${test}`);
 
 // null
 let nothing = null;
-console.log(`value: ${nothing}, type: ${nothing}`);
+consolePrint(`value: ${nothing}, type: ${nothing}`);
 
 // undefined
 let x;
-console.log(`value: ${x}, type: ${x}`);
+consolePrint(`value: ${x}, type: ${x}`);
 
 // symbol. create unique identifiers for objectys
 const symbol1 = Symbol('id');
 const symbol2 = Symbol('id');
-console.log(symbol1 === symbol2);
+consolePrint(symbol1 === symbol2);
 
 const gSymbol1 = Symbol.for('id');
 const gSymbol2 = Symbol.for('id');
-console.log(gSymbol1 === gSymbol2);
+consolePrint(gSymbol1 === gSymbol2);
 
-console.log(`value: ${symbol1.description}, type: ${typeof symbol1}`);
+consolePrint(`value: ${symbol1.description}, type: ${typeof symbol1}`);
 
 // object, real-life object, data structrure
 const ekk = { name: 'ekk', age: 25 };
@@ -113,11 +113,16 @@ ekk.age = 20;
 
 // 5. Dynamic typing: dynamically typed language
 let text = 'hello';
-console.log(text.charAt(0));
-console.log(`value: ${text}, type: ${typeof text}`);
+consolePrint(text.charAt(0));
+consolePrint(`value: ${text}, type: ${typeof text}`);
 text = 1;
-console.log(`value: ${text}, type: ${typeof text}`);
+consolePrint(`value: ${text}, type: ${typeof text}`);
 text = '7' + 5;
-console.log(`value: ${text}, type: ${typeof text}`);
+consolePrint(`value: ${text}, type: ${typeof text}`);
 text = '8' / '2';
-console.log(`value: ${text}, type: ${typeof text}`);
+consolePrint(`value: ${text}, type: ${typeof text}`);
+
+function consolePrint(cText) {
+	console.log(cText);
+	document.getElementsByClassName('dcConsoleText')[0].innerHTML += '<br>' + cText;
+}
