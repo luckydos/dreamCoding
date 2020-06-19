@@ -26,3 +26,4 @@ const ellie = new Person('ellie', 30);
 console.log(`ellie.name: ${ellie.name}`);
 console.log(`ellie.age: ${ellie.age}`);
 ellie.speak();
+
