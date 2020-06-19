@@ -18,11 +18,11 @@ class Person {
 
 	// methods
 	speak() {
-		console.log(`${this.name}: hello!`);
+		console.log(`Hi, ${this.name}`);
 	}
 }
 
 const ellie = new Person('ellie', 30);
-console.log(ellie.name);
-console.log(ellie.age);
+console.log(`ellie.name: ${ellie.name}`);
+console.log(`ellie.age: ${ellie.age}`);
 ellie.speak();
